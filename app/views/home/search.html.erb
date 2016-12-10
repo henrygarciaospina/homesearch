@@ -1,0 +1,20 @@
+<h1>Home#search</h1>
+<p>Find me in app/views/home/search.html.erb</p>
+
+
+<form action='/' method='get'>
+  <input type='text' name='q'>
+  <input type='submit'>
+</form>
+
+
+<% if @todos.any? %>
+<ul>
+  <% @todos.each do | todo | %>
+    <li><%= todo.title %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<hr>
+<%= link_to "Todos", todos_path %>
